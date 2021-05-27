@@ -54,5 +54,5 @@ for element in new_list:
         new_list.insert(index_count, f'"{popped_element}"')
         index_count += 1
 
-print(new_list)  # объедилини число и кавычки в один элемент списка
+print(new_list)  # объединили число и кавычки в один элемент списка
 print(' '.join(new_list))
