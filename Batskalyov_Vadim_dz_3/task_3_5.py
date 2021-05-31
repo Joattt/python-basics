@@ -15,7 +15,7 @@
 from random import choice
 
 
-def get_jokes(n=0, repeat=True):
+def get_jokes(n, repeat=True):
     """Composes a list of stupid jokes"""
     nouns = ["автомобиль", "лес", "огонь", "город", "дом"]
     adverbs = ["сегодня", "вчера", "завтра", "позавчера", "ночью"]
@@ -36,4 +36,4 @@ def get_jokes(n=0, repeat=True):
     return jokes
 
 
-print(get_jokes(5, False))
+print(get_jokes(n=5, repeat=False))
