@@ -18,8 +18,8 @@ def currency_rates(currency):
     response = get('http://www.cbr.ru/scripts/XML_daily.asp').text
     currency_idx = response.find((currency.upper()))
     if currency_idx != -1:
-        rate_idx = response.find('</Value>', currency_idx)
-        rate = Decimal(response[rate_idx - 7:rate_idx].replace(',', '.'))
+        rate_str = response[response.find('<Value>', currency_idx) + 7:response.find('</Value>', currency_idx)]
+        rate = Decimal(rate_str.replace(',', '.'))
         return rate
     else:
         return None
@@ -27,4 +27,5 @@ def currency_rates(currency):
 
 print(currency_rates('usd'))
 print(currency_rates('Eur'))
+print(currency_rates('gBP'))
 print(currency_rates('тугрик'))
