@@ -16,7 +16,7 @@
 tutors = ['Иван', 'Анастасия', 'Петр', 'Сергей', 'Дмитрий', 'Борис', 'Елена']
 klasses = ['9А', '7В', '9Б', '9В', '8Б', '10А', '10Б', '9А']
 
-my_gen = zip(tutors, klasses)
+my_gen = ((tutor, klass) for tutor, klass in zip(tutors, klasses))
 print(next(my_gen))
 print(next(my_gen))
 print(next(my_gen))
@@ -38,7 +38,7 @@ from itertools import zip_longest
 tutors = ['Иван', 'Анастасия', 'Петр', 'Сергей', 'Дмитрий', 'Борис', 'Елена']
 klasses = ['9А', '7В', '9Б', '9В', '8Б']
 
-my_gen = zip_longest(tutors, klasses)
+my_gen = ((tutor, klass) for tutor, klass in zip_longest(tutors, klasses))
 print(next(my_gen))
 print(next(my_gen))
 print(next(my_gen))
