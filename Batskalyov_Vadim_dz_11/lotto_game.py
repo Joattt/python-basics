@@ -114,7 +114,6 @@ class LottoCard:
 
 
 class LottoGame:
-
     def __init__(self, human, computer):
         self.human = human
         self.computer = computer
